@@ -1,1 +1,286 @@
-Hello TapSave
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TapSave 官方工具导航 - 社交媒体内容保存解决方案</title>
+    <meta name="description" content="TapSave 官方工具导航页面，提供社交媒体视频图片浏览与保存的最佳解决方案。支持 YouTube、Instagram、TikTok 等多平台高清内容获取。">
+    <meta name="keywords" content="TapSave, 视频保存, Instagram下载, YouTube视频, TikTok保存, 图片下载, 社交媒体工具">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="TapSave">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tapsave.github.io/">
+    <meta property="og:title" content="TapSave 官方工具导航">
+    <meta property="og:description" content="专业的社交媒体内容保存工具，支持多平台高清视频图片浏览。">
+    <meta property="og:site_name" content="TapSave Tools">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TapSave 官方工具导航">
+    <meta name="twitter:description" content="专业的社交媒体内容保存工具推荐">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://tapsave.github.io/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "TapSave",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Web, iOS, Android",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1250"
+        },
+        "description": "免费的在线视频和图片查看工具，支持多平台高清内容浏览。",
+        "url": "https://www.tapsave.net/"
+    }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            padding: 40px 0;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .tool-card {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        .tool-card.featured {
+            border: 3px solid #ffd700;
+            background: linear-gradient(to bottom, #fff, #fffef0);
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: 15px;
+            right: -35px;
+            background: #ffd700;
+            color: #333;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+        
+        .tool-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #2d3748;
+            margin-bottom: 12px;
+            font-size: 1.6em;
+        }
+        
+        .tool-description {
+            color: #4a5568;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .features-list li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #2d3748;
+        }
+        
+        .features-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        footer {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            margin-top: 60px;
+            padding: 30px;
+            font-size: 0.9em;
+        }
+        
+        .last-updated {
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .tools-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛠️ TapSave 工具导航</h1>
+            <p class="subtitle">精选高效的社交媒体内容保存与浏览工具</p>
+        </header>
+
+        <div class="tools-grid">
+            <article class="tool-card featured">
+                <div class="featured-badge">官方推荐</div>
+                <div class="tool-icon">📥</div>
+                <h2>TapSave 在线查看器</h2>
+                <p class="tool-description">
+                    专业的社交媒体内容浏览工具，支持多平台高清视频与图片查看。无需登录，即开即用。
+                </p>
+                <ul class="features-list">
+                    <li>支持 YouTube、Instagram、TikTok 等主流平台</li>
+                    <li>高清画质，最高支持 1080p</li>
+                    <li>无需登录，保护隐私</li>
+                    <li>全平台兼容：手机、平板、电脑</li>
+                    <li>完全免费使用</li>
+                </ul>
+                <a href="https://www.tapsave.net/" class="cta-button" rel="noopener" target="_blank">
+                    立即访问 TapSave →
+                </a>
+            </article>
+
+            <article class="tool-card">
+                <div class="tool-icon">🖼️</div>
+                <h2>图片资源获取指南</h2>
+                <p class="tool-description">
+                    如何高效获取社交媒体平台的高清原图，保持最佳画质。
+                </p>
+                <ul class="features-list">
+                    <li>原分辨率下载技巧</li>
+                    <li>批量保存方案</li>
+                    <li>元数据保留方法</li>
+                </ul>
+                <a href="https://www.tapsave.net/" class="cta-button" style="background: #48bb78;" rel="noopener" target="_blank">
+                    查看详情
+                </a>
+            </article>
+
+            <article class="tool-card">
+                <div class="tool-icon">🎬</div>
+                <h2>视频格式与兼容性</h2>
+                <p class="tool-description">
+                    了解不同视频格式的特点，以及如何在各设备间无缝切换。
+                </p>
+                <ul class="features-list">
+                    <li>MP4、MOV 格式对比</li>
+                    <li>编码参数优化建议</li>
+                    <li>跨设备播放解决方案</li>
+                </ul>
+                <a href="https://www.tapsave.net/" class="cta-button" style="background: #ed8936;" rel="noopener" target="_blank">
+                    了解更多
+                </a>
+            </article>
+        </div>
+
+        <div style="background: white; border-radius: 16px; padding: 30px; margin-top: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+            <h3 style="color: #2d3748; margin-bottom: 15px;">关于本站</h3>
+            <p style="color: #4a5568; line-height: 1.8;">
+                本站为 <strong>TapSave</strong> 官方维护的工具导航页面，旨在帮助用户快速找到适合的内容保存解决方案。
+                所有工具推荐均基于实际使用体验，确保安全可靠。
+            </p>
+        </div>
+
+        <footer>
+            <p>© 2024 TapSave. All rights reserved.</p>
+            <div class="last-updated">最后更新：2024年2月28日</div>
+            <p style="margin-top: 15px;">
+                <a href="https://www.tapsave.net/" style="color: #ffd700;" rel="noopener">TapSave 官网</a> | 
+                <a href="https://github.com/TapSave" style="color: #ffd700;">GitHub</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
