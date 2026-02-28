@@ -2,8 +2,6 @@
 
 **🌐 官方网站**: [www.tapsave.net](https://www.tapsave.net/)
 
-**📍 本站地址**: [https://tapsave.github.io/](https://tapsave.github.io/)
-
 ---
 
 ## 关于 TapSave
